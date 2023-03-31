@@ -31,11 +31,24 @@ Boolean isPallindrom( String str, int beg, int end){
 }
 
 
-// Sum of n natural number
+// Sum of digits of a number
 
 int getSum(int n){
   if(n == 0)
   return 0;
   
   return getSum(n/10) + n%10; 
-}
+}                                           //-> Aux space = O(d)  , as d(no of digits) no of function call stack created
+                                            //   Time Comp = O(d)
+
+// Alternative iterative code for sum of digits
+
+int fun(int n)
+{
+  int sum = 0, num;
+  while (num != 1){
+  sum += num%10;
+  sum /= 10;
+  }
+  return sum;             //-> Time Comp = O(d)
+}                         //-> Aux space = O(1)
