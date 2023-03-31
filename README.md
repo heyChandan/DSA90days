@@ -6,7 +6,7 @@
 30 D1:  Concepts of Rec -> print natural no n - 1 
                            print 1 - n
                         -> Tail, Non tail recursive
-32 D2: -> Check a string for pallindrom
+31 D2: -> Check a string for pallindrom
        -> Sum of natural number
-2
+
 
