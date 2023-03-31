@@ -18,6 +18,8 @@ void fun(int n){
   System.out.println(n);
 }
 
+
+
 //Day2  
 //Check String for Pallindrom(Recursive method)
 
@@ -29,6 +31,8 @@ Boolean isPallindrom( String str, int beg, int end){
    return (str.charAT(beg) == str.charAt(end)) &&      //-> Short circuit op
    isPallindrom(str, beg+1, end-1);
 }
+
+
 
 
 // Sum of digits of a number
@@ -52,3 +56,20 @@ int fun(int n)
   }
   return sum;             //-> Time Comp = O(d)
 }                         //-> Aux space = O(1)
+
+
+
+
+
+
+
+Tower of hanoi
+
+void TOH(int n, char a, char b, char c){
+  if(n == 1) 
+    System.out.println("Move "+n+" from "+a+" to "+c);
+    
+  TOH(n-1, a, b, c);
+  System.out.println("Move "+n+" from "+a+" to "+c);
+  TOH(n-1, b, a, c)
+}
