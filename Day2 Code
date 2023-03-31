@@ -1,0 +1,41 @@
+//******************** Recursion *************************
+//Day1
+//******Print Natural number N - 1
+
+void fun(int n){
+  if(n==0) return;
+  
+  System.out.println(n);
+  fun(n-1);
+}
+
+//************ print 1 - N
+
+void fun(int n){
+  if( n==0 ) return;
+  
+  fun(n-1);
+  System.out.println(n);
+}
+
+//Day2  
+//Check String for Pallindrom(Recursive method)
+
+//Initialize beg = 0 , end = n-1
+Boolean isPallindrom( String str, int beg, int end){
+  if(start >= end)
+    return false;
+    
+   return (str.charAT(beg) == str.charAt(end)) &&      //-> Short circuit op
+   isPallindrom(str, beg+1, end-1);
+}
+
+
+// Sum of n natural number
+
+int getSum(int n){
+  if(n == 0)
+  return 0;
+  
+  return getSum(n/10) + n%10; 
+}
