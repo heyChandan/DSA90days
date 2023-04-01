@@ -1,0 +1,13 @@
+1. power of n
+Function takes number n, and p . Returns n^p
+IDEA: p(n,p)  n*...p times
+      p(n,p-1) n*...p-1 times
+      
+      
+int RecursivePower(int n, int p)
+{
+    if(p == 1) return n;
+    if(p == 0) return 1;
+    
+    return n* RecursivePower(n,p-1);
+}
