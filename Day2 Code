@@ -84,3 +84,19 @@ void TOH(int n, char a, char b, char c){
   System.out.println("Move "+n+" from "+a+" to "+c);
   TOH(n-1, b, a, c)
 }
+
+
+*********************************** Day 3 *********************************************
+Rope cutting
+
+int maxPieces(int n, int a, int b,int c){
+  if(n==0) return 0;
+  if(n<=1) return -1;
+  
+  int res = Math.max(maxPieces(n-a,a,b,c),
+            (Math.max( maxPieces(n-b,a,b,c),
+                       maxPieces(n-c,a,b,c)) );
+  if (res == -1)
+    return -1;
+  return res+1;
+}
