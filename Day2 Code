@@ -31,7 +31,7 @@ int fibonacci(int n)
 
 
 
-//Day2  
+//************************************************************Day2  
 //Check String for Pallindrom(Recursive method)
 
 //Initialize beg = 0 , end = n-1
@@ -99,4 +99,19 @@ int maxPieces(int n, int a, int b,int c){
   if (res == -1)
     return -1;
   return res+1;
+}
+
+
+
+//SUBSET of a string
+
+//initialize curr as empty string " " and  i=0
+void substr(String s, Sring curr=" ", int i){
+  if(i == s.length()){
+  System.out.println();
+  return;
+  }
+  
+  subset(s, curr, i+1);
+  subset(s, curr+s.charAt(i), i+1);
 }
